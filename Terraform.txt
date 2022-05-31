@@ -1,0 +1,4 @@
+1.Download the Google Cloud CLI installer :- https://cloud.google.com/sdk/docs/install
+C:\Users\huawei\AppData\Local\Google\Cloud SDK>
+2.for windows :- https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe
+
