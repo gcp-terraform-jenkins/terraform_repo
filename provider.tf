@@ -1,6 +1,6 @@
 provider "google" {
     credentials = "${file("permission.json")}"
-    project     = "My First Project"
+    project     = "sunny-shadow-350707"
     region      = "us-east1"
     zone        = "us-east1-b" 
 }
