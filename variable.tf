@@ -18,3 +18,23 @@ variable "vpc_name" {
   type = string
   default = "terraform-vpc"
 }
+variable "vm_name" {
+  type = string
+  default = "my-vm"
+}
+variable "machine_type" {
+  type = string
+  default = "f1-micro"
+}
+variable "image_os" {
+  type = string
+  default = "ubuntu-os-pro-cloud/ubuntu-pro-2004-lts"
+}
+variable "tag_name" {
+  type = string
+  default = "dev_testing"
+}
+variable "cidr" {
+  type = string
+  default = "10.42.0.0/24"
+}
