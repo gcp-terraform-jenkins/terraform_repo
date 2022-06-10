@@ -38,6 +38,6 @@ resource "google_compute_firewall" "internetip" {
     protocol  = "tcp"
     ports     =  ["8080","9090","3000"]
   }
-  source_ranges = [ "117.0.0.0/32" ]
+  source_ranges = [ "117.0.0.0/8" ]
   target_tags = ["testing"]
 }
