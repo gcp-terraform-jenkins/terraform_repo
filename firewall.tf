@@ -23,9 +23,9 @@ resource "google_compute_firewall" "ssh" {
 }
  // internet ip
 resource "google_compute_firewall" "internetip" {
-  project     = "terraform-harindra-res01"
+  project     = var.project_id
   name        = "harindra-firewall-ingress-internetip"
-  network     = "harindra-vpc-res01"
+  network     = var.vpc_name
   
   description = "allow internetip"
    priority = "1000"
