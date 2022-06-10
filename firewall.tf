@@ -21,3 +21,23 @@ resource "google_compute_firewall" "ssh" {
  // source_tags = ["hai-rule"]
   target_tags = ["testing"]
 }
+ // internet ip
+resource "google_compute_firewall" "internetip" {
+  project     = "terraform-harindra-res01"
+  name        = "harindra-firewall-ingress-internetip"
+  network     = "harindra-vpc-res01"
+  
+  description = "allow internetip"
+   priority = "1000"
+    direction = "INGRESS"
+    depends_on = [
+      google_compute_instance.vm_instance
+    ]
+  allow {
+
+    protocol  = "tcp"
+    ports     =  ["8080","9090","3000"]
+  }
+  source_ranges = [ "117.0.0.0/32" ]
+  target_tags = ["testing"]
+}
