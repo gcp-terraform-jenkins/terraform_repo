@@ -32,7 +32,7 @@ variable "image_os" {
 }
 variable "tag_name" {
   type = string
-  default = "dev-testing"
+  default = "testing"
 }
 variable "cidr" {
   type = string
