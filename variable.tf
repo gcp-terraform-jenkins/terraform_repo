@@ -12,11 +12,11 @@ variable "zone" {
 }
 variable "subnetwork" {
   type = string
-  default = "terraform-subnetwork"
+  default = "test-vpc-subnetwork"
 }
 variable "vpc_name" {
   type = string
-  default = "terraform-vpc"
+  default = "test-vpc"
 }
 variable "vm_name" {
   type = string
