@@ -36,5 +36,5 @@ variable "tag_name" {
 }
 variable "cidr" {
   type = string
-  default = "10.42.0.0/24"
+  default = "10.42.0.0/16"
 }
