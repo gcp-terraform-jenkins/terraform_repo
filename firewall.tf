@@ -1,7 +1,7 @@
 // firewall for ssh
 resource "google_compute_firewall" "ssh" {
   project     = var.project_id
-  name        = "sunny-firewall-ingress-allow-iap"
+  name        = "mahesh-firewall-ingress-allow-iap"
   network     = var.vpc_name
   
   description = "allow ssh"

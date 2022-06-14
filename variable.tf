@@ -1,6 +1,6 @@
 variable "project_id" {
   type = string
-  default = "sunny-shadow-350707"
+  default = "terraform-00007 "
 } 
 variable "reg" {
   type = string
