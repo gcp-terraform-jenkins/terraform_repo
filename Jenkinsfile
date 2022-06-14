@@ -8,7 +8,7 @@ agent any
      }
 	parameters {
 	  choice choices: ['apply','destroy'],
-	  descrption: 'do you want to create archetecture or destroy'
+	  description: 'do you want to create archetecture or destroy'
 	  name: 'action'
 	 } 
 	 stages{
