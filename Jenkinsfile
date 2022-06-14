@@ -20,6 +20,7 @@ agent any
 			 userRemoteConfigs: [[credentialsId: 'github_cred',
 			  url: 'https://github.com/gcp-terraform-jenkins/terraform_repo.git']]])
 	   }
+	 }
 	   stage('terraform init'){
 	     steps{
 	       sh 'terraform init'
