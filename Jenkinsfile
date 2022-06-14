@@ -14,7 +14,11 @@ agent any
 	 stages{
 	 stage('Checkout_SCM'){
 	   steps{
-	      
+	      checkout([$class: 'GitSCM',
+		   branches: [[name: '*/master']],
+		    extensions: [],
+			 userRemoteConfigs: [[credentialsId: 'github_cred',
+			  url: 'https://github.com/gcp-terraform-jenkins/terraform_repo.git']]])
 	   }
 	   stage('terraform init'){
 	     steps{
