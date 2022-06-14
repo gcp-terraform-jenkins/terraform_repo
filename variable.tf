@@ -1,6 +1,6 @@
 variable "project_id" {
   type = string
-  default = "terraform-00007"
+  default = "jenkins-353310"
 } 
 variable "reg" {
   type = string
