@@ -6,12 +6,12 @@ agent any
   tools{
       terraform 'terraform'
      }
-	/*parameters {
+	parameters {
 	  choice choices: ['apply','destroy'],
 	  description: 'do you want to create archetecture or destroy',
 	  name: 'action'
-	 } */
-	 stages{
+	 } 
+	stages{
 	 stage('Checkout_SCM'){
 	   steps{
 	      checkout([$class: 'GitSCM',
@@ -31,12 +31,12 @@ agent any
 	       sh 'terraform fmt'
 		   }
 	    }
-		/*stage('terraform apply or destroy'){
+		stage('terraform apply or destroy'){
 	     steps{
 	       sh 'terraform ${action} --auto-approve'
 		   }
-	    }*/
-		  stage(' infra Approval phase') {
+	    }
+	/* 	  stage(' infra Approval phase') {
            steps {
               script {
           def userInput = input(id: 'confirm',
@@ -50,7 +50,7 @@ agent any
     }
 	 stage('TF Apply') {
       steps {
-          sh 'terraform apply'
+          sh 'terraform apply --a'
           }
 	   }
           stage(' infra destroy phase') {
@@ -67,9 +67,9 @@ agent any
     }
 	stage('TF destroy') {
       steps {
-          sh 'terraform destroy'
+          sh 'terraform destroy --auto'
           }
-	   }
+	   }*/
 
 	 }
 }
