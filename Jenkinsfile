@@ -36,7 +36,7 @@ agent any
 	       sh 'terraform ${action} --auto-approve'
 		   }
 	    }*/
-		  stage('Approval') {
+		  stage(' infra Approval phase') {
            steps {
               script {
           def userInput = input(id: 'confirm',
@@ -50,7 +50,24 @@ agent any
     }
 	 stage('TF Apply') {
       steps {
-          sh 'terraform apply -input=false myplan'
+          sh 'terraform apply'
+          }
+	   }
+          stage(' infra destroy phase') {
+           steps {
+              script {
+          def userInput = input(id: 'destroy infra',
+		  message: 'destroy Terraform?', 
+		  parameters: [ [$class: 'BooleanParameterDefinition', 
+		  defaultValue: false, 
+		  description: 'destroy terraform', 
+		  name: 'destroy infra'] ])
+        }
+      }
+    }
+	stage('TF Apply') {
+      steps {
+          sh 'terraform destroy'
           }
 	   }
 
