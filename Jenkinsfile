@@ -34,8 +34,10 @@ agent any
 		stage('terraform apply'){
 	     steps{
 	      // sh 'terraform ${action} --auto-approve'
-		  sh 'terraform apply'
-		  sh 'input message: 'do want to proceed', ok: 'Yes''
+		  sh '''terraform apply
+		        input message: 'do want to proceed', ok: 'Yes'
+		  '''
+		  
 		   }
 	    }
 	/* 	  stage(' infra Approval phase') {
