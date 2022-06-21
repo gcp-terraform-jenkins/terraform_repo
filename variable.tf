@@ -12,15 +12,15 @@ variable "zone" {
 }
 variable "subnetwork" {
   type = string
-  default = "test-subnetwork"
+  default = "test-subnetwork_1"
 }
 variable "vpc_name" {
   type = string
-  default = "test-vpc"
+  default = "test-vpc_1"
 }
 variable "vm_name" {
   type = string
-  default = "my-vm"
+  default = "my-vm-1"
 }
 variable "machine_type" {
   type = string
