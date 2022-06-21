@@ -12,15 +12,15 @@ variable "zone" {
 }
 variable "subnetwork" {
   type = string
-  default = "test-subnetwork-1"
+  default = "test-subnetwork-11"
 }
 variable "vpc_name" {
   type = string
-  default = "test-vpc-1"
+  default = "test-vpc-11"
 }
 variable "vm_name" {
   type = string
-  default = "my-vm-1"
+  default = "my-vm-11"
 }
 variable "machine_type" {
   type = string
@@ -32,7 +32,7 @@ variable "image_os" {
 }
 variable "tag_name" {
   type = string
-  default = "test-1"
+  default = "test-11"
 }
 variable "cidr" {
   type = string
