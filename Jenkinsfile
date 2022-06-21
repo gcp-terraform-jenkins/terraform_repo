@@ -6,11 +6,11 @@ agent any
   tools{
       terraform 'terraform'
      }
-	parameters {
+	/*parameters {
 	  choice choices: ['apply','destroy'],
 	  description: 'do you want to create archetecture or destroy',
 	  name: 'action'
-	 } 
+	 } */
 	stages{
 	 stage('Checkout_SCM'){
 	   steps{
@@ -31,9 +31,11 @@ agent any
 	       sh 'terraform fmt'
 		   }
 	    }
-		stage('terraform apply or destroy'){
+		stage('terraform apply'){
 	     steps{
-	       sh 'terraform ${action} --auto-approve'
+	      // sh 'terraform ${action} --auto-approve'
+		  sh 'terraform apply'
+		  sh 'input message: 'do want to proceed', ok: 'Yes''
 		   }
 	    }
 	/* 	  stage(' infra Approval phase') {
