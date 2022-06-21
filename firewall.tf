@@ -1,7 +1,7 @@
 // firewall for ssh
 resource "google_compute_firewall" "ssh" {
   project     = var.project_id
-  name        = var.firewall_name_1
+  name        = "firewall_ssh"
   network     = var.vpc_name
   
   description = "allow ssh"
@@ -24,7 +24,7 @@ resource "google_compute_firewall" "ssh" {
  // internet ip
 resource "google_compute_firewall" "internetip" {
   project     = var.project_id
-  name        = var.firewall_name_2
+  name        = "firewall_internetip"
   network     = var.vpc_name
   description = "allow internetip"
    priority = "1000"

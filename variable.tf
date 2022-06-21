@@ -38,12 +38,3 @@ variable "cidr" {
   type = string
   default = "10.42.0.0/16"
 }
-
-variable "firewall_name_1" {
-  type = string
-  default = "firewall_ssh" 
-}
-variable "firewall_name_2" {
-  type = string
-  default = "firewall_internet_ip" 
-}
