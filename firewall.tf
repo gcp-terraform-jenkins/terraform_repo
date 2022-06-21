@@ -19,7 +19,7 @@ resource "google_compute_firewall" "ssh" {
   //source_service_accounts
   source_ranges = ["35.235.240.0/20"]
  // source_tags = ["hai-rule"]
-  target_tags = ["test_1"]
+  target_tags = ["test-1"]
 }
  // internet ip
 resource "google_compute_firewall" "internetip" {
