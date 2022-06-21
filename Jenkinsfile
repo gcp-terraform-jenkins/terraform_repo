@@ -65,7 +65,7 @@ agent any
         }
       }
     }
-	stage('TF Apply') {
+	stage('TF destroy') {
       steps {
           sh 'terraform destroy'
           }
