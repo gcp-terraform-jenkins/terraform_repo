@@ -20,7 +20,7 @@ variable "vpc_name" {
 }
 variable "vm_name" {
   type = string
-  default = "my_vm"
+  default = "my-vm"
 }
 variable "machine_type" {
   type = string
