@@ -1,7 +1,7 @@
 // firewall for ssh
 resource "google_compute_firewall" "ssh" {
   project     = var.project_id
-  name        = "mahesh-11-firewall-ingress-allow-iap"
+  name        = var.firewall_name_1
   network     = var.vpc_name
   
   description = "allow ssh"
@@ -19,14 +19,13 @@ resource "google_compute_firewall" "ssh" {
   //source_service_accounts
   source_ranges = ["35.235.240.0/20"]
  // source_tags = ["hai-rule"]
-  target_tags = ["testing-11"]
+  target_tags = ["test_1"]
 }
  // internet ip
 resource "google_compute_firewall" "internetip" {
   project     = var.project_id
-  name        = "harindra-11-firewall-ingress-internetip"
+  name        = var.firewall_name_2
   network     = var.vpc_name
-  
   description = "allow internetip"
    priority = "1000"
     direction = "INGRESS"
@@ -39,5 +38,5 @@ resource "google_compute_firewall" "internetip" {
     ports     =  ["8080","9090","3000"]
   }
   source_ranges = [ "117.0.0.0/8","49.0.0.0/8" ]
-  target_tags = ["testing-11"]
+  target_tags = ["test_1"]
 }

@@ -12,15 +12,15 @@ variable "zone" {
 }
 variable "subnetwork" {
   type = string
-  default = "harindra-11-vpc-subnetwork"
+  default = "test-subnetwork"
 }
 variable "vpc_name" {
   type = string
-  default = "harindra-11-test-vpc"
+  default = "test-vpc"
 }
 variable "vm_name" {
   type = string
-  default = "test-vm-11"
+  default = "my_vm"
 }
 variable "machine_type" {
   type = string
@@ -32,9 +32,14 @@ variable "image_os" {
 }
 variable "tag_name" {
   type = string
-  default = "test-11"
+  default = "test_1"
 }
 variable "cidr" {
   type = string
   default = "10.42.0.0/16"
+}
+
+variable "firewall_name_1" {
+  type = string
+  default = "firewall_ssh" 
 }
