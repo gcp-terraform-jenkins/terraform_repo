@@ -6,11 +6,11 @@ agent any
   tools{
       terraform 'terraform'
      }
-	/*parameters {
+	parameters {
 	  choice choices: ['apply','destroy'],
 	  description: 'do you want to create archetecture or destroy',
 	  name: 'action'
-	 } */
+	 } 
 	stages{
 	 stage('Checkout_SCM'){
 	   steps{
